@@ -37,7 +37,7 @@ Image *steganography(Image *image)
 	uint32_t rows = image->rows;
 	uint32_t cols = image->cols;
 	Image *new_image = (Image *)malloc(sizeof(Image));
-	new_image->image = (Color **) malloc(sizeof(Color) * rows * cols); 
+	new_image->image = (Color **) malloc(sizeof(Color*) * rows * cols); 
 
 	new_image->rows = rows;
 	new_image->cols = cols;
